@@ -1,0 +1,14 @@
+apiVersion: v1 # The version of the Kubernetes API you're using
+kind: Pod # The kind of resource you're defining
+metadata: # Metadata about the resource
+  name: mypod # The name of the Pod
+  labels: # Key-value pairs attached to the Pod, useful for queries and filtering
+    tier: frontend 
+spec: # The specification of the resource
+  containers: # The list of containers to be run inside the Pod
+  - image: bruce7788/task6 # The Docker image to be used for this container
+    name: task61 # The name of the container
+    ports: # The ports exposed by this container
+    - containerPort: 3000 # The port number that this container listens on
+  dnsPolicy: ClusterFirst # The DNS policy for the Pod. "ClusterFirst" means that the Pod uses the cluster's DNS
+  restartPolicy: Always # The restart policy for all containers within the Pod. "Always" means the containers will always restart on failure

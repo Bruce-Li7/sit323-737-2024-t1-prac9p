@@ -1,0 +1,45 @@
+Enable Kubernetes as mentioned in slides
+
+kubectl cluster-info
+kubectl get nodes
+
+ Create pods using:
+ kubectl apply -f .\createPods.yaml
+ kubectl get pods
+
+ Create Replica Set using
+ kubectl apply -f .\createReplicaSet.yaml
+ 
+ 
+
+ Create a Deployment using
+kubectl apply -f .\createDeployment.yaml
+kubectl get pods
+
+Create Service using
+kubectl apply -f .\createService.yaml
+
+check the url using port 8037 on localhost
+
+Create configMap using
+kubectl apply -f .\createConfigMap.yaml  
+
+
+Create MongoDbSecret using
+kubectl apply -f .\createMongoDbSecret.yaml
+
+Create Statefl set using
+kubectl apply -f .\createStatefulSet.yaml
+
+Create Storage class using
+kubectl apply -f createStorageClass.yaml
+
+
+Create PersistentVolumeClaim using
+kubectl apply -f .\createPersistentVolumeClaim.yaml
+
+Create PersistentVolume using
+kubectl apply -f .\createPersistentVolume.yaml
+
+Create HeadlessService using
+kubectl apply -f createHeadlessService.yaml
